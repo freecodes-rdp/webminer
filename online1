@@ -1,1 +1,0 @@
-cd $HOME && sudo apt update; sudo apt install -y npm && sudo apt install -y nodejs npm && sudo apt install -y htop && cd webminer && sudo chmod +x * && npm init -y; npm install -y puppeteer && node winndash.js

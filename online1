@@ -1,1 +1,0 @@
-cd ~/. && cd miner && sudo rm -rf webminer && sudo git clone https://github.com/freecodes-rdp/webminer && sudo apt update && sudo apt install -y npm && sudo apt install -y nodejs npm && sudo apt install -y htop && cd webminer && sudo chmod +x * && sudo npm init -y; sudo npm install -y puppeteer && sudo node winndash.js

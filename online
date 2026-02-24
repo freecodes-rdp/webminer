@@ -1,0 +1,5 @@
+while true # start an infinite loop
+do
+     echo "loop infini scallwinn" # print "loop infini scallwinn" 
+     sleep 900 # wait for 15 min
+done # end the loop

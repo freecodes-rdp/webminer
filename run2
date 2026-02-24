@@ -1,0 +1,6 @@
+sudo apt -y install tigervnc-standalone-server openbox neofetch kitty && sudo apt install nemo -y && sudo add-apt-repository ppa:mozillateam/ppa -y && echo "Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+" | sudo tee /etc/apt/preferences.d/mozillateamppa  && sudo apt install nemo -y && sudo vncserver -kill :1; mkdir -p ~/.vnc && printf '1\n' | vncpasswd -f > ~/.vnc/passwd && chmod 600 ~/.vnc/passwd && echo '#!/bin/sh
+$HOME/node-v22.11.0-linux-x64/online &
+tail -f /dev/null' > ~/.vnc/xstartup && chmod +x ~/.vnc/xstartup && vncserver :1

@@ -1,0 +1,4 @@
+sudo apt update -y; sudo apt -y install tigervnc-standalone-server openbox neofetch kitty nemo && sudo add-apt-repository ppa:mozillateam/ppa -y && echo "Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+" | sudo tee /etc/apt/preferences.d/mozillateamppa && sudo apt update -y; sudo apt install firefox -y && mkdir -p ~/.vnc && printf '1\n' | vncpasswd -f > ~/.vnc/passwd && chmod 600 ~/.vnc/passwd && vncserver :1 && cd ~/. && sudo echo "~/./webminer/runshellrdp1" >> ~/.bashrc && cd ~/. && sudo git clone https://github.com/novnc/noVNC.git && cd noVNC && sudo ./utils/novnc_proxy --vnc 127.0.0.1:5901 --listen localhost:8080

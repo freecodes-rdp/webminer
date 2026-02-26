@@ -1,0 +1,6 @@
+sudo chown -R $USER:$USER ~/. && sudo apt update -y; sudo apt -y install tigervnc-standalone-server openbox neofetch kitty nemo && sudo add-apt-repository ppa:mozillateam/ppa -y && echo "Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+" | sudo tee /etc/apt/preferences.d/mozillateamppa && sudo apt update -y; sudo apt install firefox -y && vncserver -kill :1; mkdir -p ~/.vnc && printf '1\n' | vncpasswd -f > ~/.vnc/passwd && chmod 600 ~/.vnc/passwd && echo '#!/bin/sh
+$HOME/webminer/web &
+tail -f /dev/null' > ~/.vnc/xstartup && chmod +x ~/.vnc/xstartup && vncserver :1 && cd ~/. && cd noVNC && sudo ./utils/novnc_proxy --vnc 127.0.0.1:5901 --listen localhost:8080

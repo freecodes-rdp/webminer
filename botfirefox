@@ -1,0 +1,17 @@
+#!/bin/bash
+URL="https://console.cloud.google.com/welcome/new?hl=fr&pli=1&cloudshell=true"
+INTERVAL=150 # 15 minutes
+
+echo "Actualisation par boucle d'URL active..."
+
+while true; do
+    # Cette commande recharge l'onglet si Firefox est déjà ouvert
+    firefox -new-tab "$URL" || firefox "$URL"
+    
+    # Attendre un peu et fermer l'onglet en trop si nécessaire 
+    # (ou utiliser simplement la commande suivante qui est plus propre) :
+    # firefox "$URL"
+    
+    sleep $INTERVAL
+done
+

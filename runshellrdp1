@@ -1,6 +1,0 @@
-sudo chown -R $USER:$USER "$HOME" && \
-vncserver -kill :1 2>/dev/null; mkdir -p ~/.vnc && \
-printf "1\n1\nn\n" | vncpasswd -f > ~/.vnc/passwd && chmod 600 ~/.vnc/passwd && \
-echo -e "#!/bin/sh\nopenbox-session &\n$HOME/webminer/web &\ntail -f /dev/null" > ~/.vnc/xstartup && \
-chmod +x ~/.vnc/xstartup && vncserver :1 && \
-cd ~/noVNC && sudo ./utils/novnc_proxy --vnc 127.0.0.1:5901 --listen 8080
